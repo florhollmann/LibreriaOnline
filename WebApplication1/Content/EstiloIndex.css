@@ -1,0 +1,260 @@
+﻿/* color celeste #0098aa
+   color gris #e9ecef
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    background: white;
+}
+/* Reset style */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/*/////////////-------------- BANNER fondo HEADER -----------//////////// */
+#HeroBanner {
+    display: table;
+    padding: 0;
+    width: 100%;
+    height: 650px;
+    background: url('../Images/architecture-book-shelves-bookcase-1319854.jpg') bottom no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+    #HeroBanner .hero-content {
+        display: table-cell;
+        background-color: rgba(10,40,60,0.7);
+        text-align: center;
+        vertical-align: middle;
+        padding: 0 15px;
+    }
+
+        #HeroBanner .hero-content h1 {
+            font-size: 48px;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0 0 20px;
+        }
+
+        #HeroBanner .hero-content p {
+            font-size: 28px;
+            color: #fff;
+            margin: 0 0 30px;
+        }
+
+        #HeroBanner .hero-content .hero-cta {
+            font-size: 22px;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 0;
+            display: inline-block;
+            padding: 10px 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+            #HeroBanner .hero-content .hero-cta:hover {
+                background-color: #0098aa;
+                border: 2px solid #0098aa;
+                transition: all 0.3s ease-in-out;
+            }
+
+            /* ---------------------seccion Curiosidades-------------------------*/
+/* services section style goes here */
+#Services {
+    padding: 80px 0 50px;
+    background-color: #fafafa;
+}
+
+    #Services .block-heading {
+        margin-bottom: 100px;
+    }
+
+        #Services .block-heading p:last-of-type {
+            margin: 0;
+        }
+
+    #Services .services-wrapper {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #Services .each-service {
+        position: relative;
+        text-align: center;
+        border: 1px solid #e6e6e6;
+        border-radius: 12px;
+        background-color: #fff;
+        margin: 0 15px 40px;
+        padding: 25px 20px 15px;
+    }
+
+        #Services .each-service .service-icon {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px;
+            background-color: #0098aa;
+            border-radius: 50%;
+            transition: all 0.2s ease-in-out;
+        }
+
+            #Services .each-service .service-icon i {
+                font-size: 24px;
+                color: #fff;
+                transition: all 0.2s ease-in-out;
+            }
+
+        #Services .each-service:hover .service-icon {
+            background-color: #ffffff;
+            border: 1px solid #0098aa;
+            transition: all 0.2s ease-in-out;
+        }
+
+            #Services .each-service:hover .service-icon i {
+                color: #0098aa;
+                transition: all 0.2s ease-in-out;
+            }
+
+        #Services .each-service h5 {
+            margin: 10px 0 10px;
+        }
+
+        #Services .each-service p:last-child {
+            margin: 0;
+        }
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3.5s;
+    animation-name: fade;
+    animation-duration: 5.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* about us section style goes here */
+#QuienesSomos {
+    position: relative;
+}
+#QuienesSomos .container-fluid {
+    padding: 50px;
+}
+
+h2 {
+    font-weight:700;
+}
+    #QuienesSomos .about-wrapper .col-lg-6 {
+        padding: 80px 20px 80px 10px;
+    }
+
+
+
+#fotoStartup {
+    background: url('../Images/startup.jpg') no-repeat;
+    background-size: 100%;
+    background-position:center;
+    padding: -50px;
+}
+
+/*Baner perfiles
+
+*/
+#bannerPerfiles {
+    background-image: url('../Images/startup-photos.jpg');
+    background-size: 100%;
+    opacity: 0.8;
+    background-position: center;
+    background-attachment:fixed;
+}
+
+#bannerPerfiles h3 {
+    padding: 50px;
+    font-weight: 800;
+}
