@@ -133,6 +133,7 @@
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Inspiration_ProfilesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -172,6 +173,7 @@
     <Content Include="Content\EstiloIndex.css" />
     <Content Include="Content\EstiloLayout.css" />
     <Content Include="Content\EstiloPerfiles.css" />
+    <Content Include="Content\PopUpsStyles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -293,6 +295,11 @@
     <Content Include="Views\Book\Details.cshtml" />
     <Content Include="Views\Book\Edit.cshtml" />
     <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\Inspiration_Profiles\Create.cshtml" />
+    <Content Include="Views\Inspiration_Profiles\Delete.cshtml" />
+    <Content Include="Views\Inspiration_Profiles\Details.cshtml" />
+    <Content Include="Views\Inspiration_Profiles\Edit.cshtml" />
+    <Content Include="Views\Inspiration_Profiles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

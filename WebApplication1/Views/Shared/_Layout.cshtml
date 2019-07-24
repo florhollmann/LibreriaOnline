@@ -9,6 +9,7 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/EstiloLayout.css" rel="stylesheet" />
     <link href="~/Content/EstiloPerfiles.css" rel="stylesheet" />
+    <link href="~/Content/PopUpsStyles.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
@@ -45,7 +46,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto justify-content-between">
                 <li class="nav-item active nav-link">
-                    @Html.ActionLink("Home", "Index", "Home")
+                    @Html.ActionLink("Inicio", "Index", "Home")
                 </li>
                 <li class="nav-item nav-link">
                    @Html.ActionLink("Libros", "Index", "Book")
@@ -66,7 +67,7 @@
                         <a class="dropdown-item" href="#">Ellon Musk</a>
                         <a class="dropdown-item" href="#">Jack Ma</a>
                         <div class="dropdown-divider"></div>
-                        @Html.ActionLink("Arma tu propio perfil inspirador!", "Index", "Book")
+                        <a class="dropdown-item nav-link">@Html.ActionLink("Arma tu Perfil!", "Index", "Inspiration_Profiles") </a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -75,15 +76,26 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn s my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn s my-2 my-sm-0" type="submit">Buscar...</button>
             </form>
         </div>
     </nav>
     <div>
             @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                <footer id="Footer">
+                    <div class="container">
+                        <div class="social-share">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-logo-wrap">
+                            Inspiration &copy; 2019. Designed by Flor Hollmann</a>
+                        </div>
+                    </div>
             </footer>
         </div>
 
