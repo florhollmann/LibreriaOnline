@@ -1,7 +1,9 @@
-﻿var slideIndex = 0;
-showSlides();
+﻿
 
 /* -------------------FUNCION SLIDES CAROUSEL ======-----*/
+
+var slideIndex = 0;
+showSlides();
 
 function showSlides() {
     var i;
@@ -78,3 +80,4 @@ function clickDelA(e) {
     document.body.appendChild(div)
     //Event.preventDefault() : Detiene el comportamiento por default de cualquier nodo
     console.log("click del a!")
+}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
@@ -21,19 +22,19 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Inspiration_Profiles/Details/5
-        public ActionResult Details(int? id)
+        /*public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inspiration_Profiles inspiration_Profiles = db.Inspiration_Profiles.Find(id);
+            Inspiration_Profiles inspiration_Profiles = db.Inspiration_Profiles.Include(ip => ip.Books.Select(b => b.Author).Where(ip => ip.ID == id).FirstOrDefault();
             if (inspiration_Profiles == null)
             {
                 return HttpNotFound();
             }
             return View(inspiration_Profiles);
-        }
+        }*/
 
         // GET: Inspiration_Profiles/Create
         public ActionResult Create()
@@ -124,7 +125,67 @@ namespace WebApplication1.Controllers
             base.Dispose(disposing);
         }
 
-        
-       
+        public ActionResult GetBooksByInspirationProfiles(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Inspiration_Profiles inspiration_Profiles = (from i in db.Inspiration_Profiles
+                                                        where i.ID == id
+                                                         select i).FirstOrDefault();
+           
+
+            if (inspiration_Profiles == null)
+            {
+                return HttpNotFound();
+            }
+            return View(inspiration_Profiles);
+        }
+
+        /*
+                public ActionResult GetBooksByInspirationProfileID(string terminoFiltrado)
+                {
+                     if (id == null)
+                        {
+                            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                        }
+                        Inspiration_Profiles inspiration_Profiles = db.Inspiration_Profiles.Find(id);
+                        if (inspiration_Profiles == null)
+                        {
+                            return HttpNotFound();
+                        }
+                        return View(inspiration_Profiles);
+                    }
+
+                //FUNCION PARA HACER FILTRADOS!!!!!
+
+                public ActionResult MinuevoAction(string terminoFiltrado)
+                {
+                    List<Book> libros = db.Books.Where(l => l.Titulo.Contains(terminoFiltrado) || l.Author.Contains(terminoFiltrado)).ToList();
+
+                    return View("Index", libros);
+
+
+                public ActionResult MinuevoAction(int id)
+                {
+                    Book libros = db.Books.Where(l => l.ID == id);
+
+                    return View("Index", libros);
+
+               
+
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Inspiration_Profiles inspiration_Profiles = db.Inspiration_Profiles.Include(a => a.Books).Where(a => a.ID == id.Value).ToList();
+            if (inspiration_Profiles == null)
+            {
+                return HttpNotFound();
+            }
+            return View(inspiration_Profiles); }*/
     }
 }
