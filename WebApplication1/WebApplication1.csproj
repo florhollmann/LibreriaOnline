@@ -299,6 +299,7 @@
     <Content Include="Views\Inspiration_Profiles\Delete.cshtml" />
     <Content Include="Views\Inspiration_Profiles\Details.cshtml" />
     <Content Include="Views\Inspiration_Profiles\Edit.cshtml" />
+    <Content Include="Views\Inspiration_Profiles\GetBooksByInspirationProfiles.cshtml" />
     <Content Include="Views\Inspiration_Profiles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
