@@ -5,14 +5,13 @@
 }
 <main id="EstiloMain">
     <h2>Index</h2>
-
-    <p>
+    <p>.
         @Html.ActionLink("Create New", "Create")
     </p>
     <script src="~/Scripts/script.js"></script>
     <input type="text" id="myInput" onkeyup="buscar()" placeholder="buscar x nombre..">
     <table id="myTable" class="table-bordered">
-        <tr class="header>
+        <tr class="header">
             <th>
                 @Html.DisplayNameFor(model => model.Titulo)
             </th>
@@ -20,7 +19,7 @@
                 @Html.DisplayNameFor(model => model.Author.Nombre)
             </th>
             <th></th>
-        </trclass="header>
+        </tr> 
 
         @foreach (var item in Model)
         {

@@ -17,7 +17,10 @@ namespace WebApplication1.Controllers
         // GET: Book
         public ActionResult Index()
         {
+            var authors = db.Authors.Include(a => a.Nombre); //!! INCLUI ESTO PARA VISTA PARCIAL
+            //esto me muestra el listado de autores previo
             var books = db.Books.Include(b => b.Author);
+           
             return View(books.ToList());
         }
 
